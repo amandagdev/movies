@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
 
 #root {
   --primary-color: #fea;
-  --secondary-color: #764701
+  --secondary-color: #764701;
+  font-family:'Montserrat', sans-serif;
 }
 
 * {
@@ -14,8 +15,6 @@ const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   color: #333;
-  --font-first: Helvetica, Arial, sans-serif;
-  --font-second: 'Montserrat', geogia;
 }
 
 html,
@@ -55,6 +54,12 @@ a {
 }
 button {
   cursor: pointer;
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 `;
  
