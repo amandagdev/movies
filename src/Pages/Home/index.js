@@ -4,7 +4,7 @@ const Home = () => {
   console.log('ola home')
   return (
     <div>
-      <h1>home</h1>
+      <h1>homeaaa</h1>
     </div>
   )
 }
