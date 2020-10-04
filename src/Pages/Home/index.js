@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Header from '../../Components/Header';
 
 const Home = () => {
-  console.log('ola home')
   return (
-    <div>
-      <h1>homeaaa</h1>
-    </div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default Home
+export default Home;
