@@ -9,13 +9,16 @@ const useRequest = () => {
 
 
   const request = useCallback(async(url) => {
-    const { code } = await MOVIES(url)
+    const { code } = MOVIES(url)
     try { 
+      setLoading(true)
+      setError(null)
       const response = await axios.get(code)
       setData(response.data)
-
     } catch(error) {
-      console.log(error)
+      setError(error.message)
+    } finally {
+      setLoading(false)
     }
   }, [])
   return { data, error, loading, request };
