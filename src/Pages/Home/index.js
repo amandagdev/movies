@@ -10,6 +10,8 @@ const Home = () => {
   const dispacth = useDispatch();
   const card = useSelector((state) => state.card.movies.data);
 
+
+
   useEffect(() => {
     dispacth(getToMovies());
   }, [dispacth]);

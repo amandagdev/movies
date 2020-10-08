@@ -1,7 +1,10 @@
-export function getToMovies(movies) {
+export function getToMovies(page, movies) {
   return {
     type: 'GET_MOVIES',
-    movies
+    payload: {
+      page,
+      movies
+    }
   };
 }
 
@@ -22,36 +25,28 @@ export function getToMoviesFailure(error) {
 export function getMoviesDetails(id) {
   return {
     type: 'MOVIES_DETAILS',
-    payload: {
-      id,
-    },
+      id
   };
 }
 
 export function getMoviesDetailsSucess(id) {
   return {
     type: 'MOVIES_DETAILS_SUCESS',
-    payload: {
-      id,
-    },
+      id
   };
 }
 
 export function getMoviesDetailsFailure(id) {
   return {
     type: 'MOVIES_DETAILS_FAILURE',
-    payload: {
-      id,
-    },
+      id
   };
 }
 
 export function getFavs(favs) {
   return {
     type: 'FAVS_MOVIE',
-    payload: {
-      favs,
-    },
+      favs
   };
 }
 

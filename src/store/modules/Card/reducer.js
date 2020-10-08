@@ -13,7 +13,7 @@ const card = (state = initialState, action) => {
       }
 
       case 'GET_MOVIES_SUCESS': {
-        draft.movies = action.movies
+        draft.movies = action.movies;
         break;
       }
 
