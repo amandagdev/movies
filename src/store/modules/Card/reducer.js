@@ -9,7 +9,6 @@ const card = (state = initialState, action = {}) => {
   return produce(state, (draft) => {
     switch (action.type) {
       case 'GET_MOVIES': {
-        console.log('chamou')
         break;
       }
 
@@ -18,7 +17,7 @@ const card = (state = initialState, action = {}) => {
         break;
       }
 
-      case 'FAVS_MOVIE': {
+      case 'GET_MOVIES_FAILURE': {
         break;
       }
 

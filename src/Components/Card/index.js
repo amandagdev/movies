@@ -1,10 +1,17 @@
-import React from 'react'
-import { CardMovie } from './styles'
+import React from 'react';
+import { CardMovie, Title } from './styles';
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
+  console.log(item);
   return (
-    <CardMovie>card: {item.title}</CardMovie>
-  )
-}
+    <CardMovie>
+      <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt="" />
+      <Title>
+        <h3>{item.title}</h3>
+        <div>{item.vote_average}</div>
+      </Title>
+    </CardMovie>
+  );
+};
 
-export default Card
+export default Card;

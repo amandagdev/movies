@@ -4,11 +4,15 @@ import { Container, Section } from './styles';
 import Header from '../../Components/Header';
 import CardMovie from '../../Components/Card';
 import { useDispatch, useSelector } from 'react-redux';
+import { getToMovies } from '../../store/modules/Card/actions';
 
 const Home = () => {
-  const dispacth = useDispatch()
-  const card = useSelector(state => state.card.movies)
+  const dispacth = useDispatch();
+  const card = useSelector((state) => state.card.movies.data);
 
+  useEffect(() => {
+    dispacth(getToMovies());
+  }, [dispacth]);
 
   return (
     <>
@@ -16,8 +20,8 @@ const Home = () => {
       <Section>
         <h1>Popular Movies</h1>
         <Container>
-          {/* {data &&
-            data.results.map((item) => <CardMovie key={item.id} item={item} />)} */}
+          {card &&
+            card.results.map((item) => <CardMovie key={item.id} item={item} />)}
         </Container>
       </Section>
     </>

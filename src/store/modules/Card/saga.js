@@ -1,14 +1,14 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
-import  getMoviesAll from '../../../services/api';
-import { getToMoviesSucess } from './actions'
+import  api from '../../../services/api';
+import { getToMoviesSucess, getToMoviesFailure } from './actions'
 
 function* getMovies() {
   try {
-    const movies = yield call(getMoviesAll, 'popular')
+    const movies = yield call(api, 'popular')
     yield put(getToMoviesSucess(movies))
   }
   catch(error){
-    yield put(error.data.error)
+    yield put(getToMoviesFailure(error))
   }
 }
 
