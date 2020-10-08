@@ -15,6 +15,8 @@
 - [X] React Icons
 - [X] Redux
 - [X] Redux Saga
+- [X] Styled Components
+- [X] Immer
 
 
 > Status do Projeto: Em desenvolvimento :warning:
