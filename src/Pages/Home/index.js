@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Container, Section } from './styles';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Header from '../../Components/Header';
 import CardMovie from '../../Components/Card';
-import { useDispatch, useSelector } from 'react-redux';
 import { getToMovies } from '../../store/modules/Card/actions';
 
 const Home = () => {

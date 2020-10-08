@@ -5,7 +5,7 @@ const initialState = {
   favs: [],
 };
 
-const card = (state = initialState, action = {}) => {
+const card = (state = initialState, action) => {
   return produce(state, (draft) => {
     switch (action.type) {
       case 'GET_MOVIES': {
