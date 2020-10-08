@@ -1,9 +1,9 @@
 import React from 'react'
 import { CardMovie } from './styles'
 
-const Card = () => {
+const Card = ({item}) => {
   return (
-    <CardMovie>card</CardMovie>
+    <CardMovie>card: {item.title}</CardMovie>
   )
 }
 

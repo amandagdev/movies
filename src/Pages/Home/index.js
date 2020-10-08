@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { Container, Section } from './styles';
-import useRequest from '../../hooks/useRequest';
 
 import Header from '../../Components/Header';
 import CardMovie from '../../Components/Card';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Home = () => {
-  const { data, request } = useRequest();
+  const dispacth = useDispatch()
+  const card = useSelector(state => state.card.movies)
 
-  useEffect(() => {
-    request('popular');
-  }, []);
 
   return (
     <>
@@ -18,13 +16,8 @@ const Home = () => {
       <Section>
         <h1>Popular Movies</h1>
         <Container>
-          <CardMovie />
-          <CardMovie />
-          <CardMovie />
-          <CardMovie />
-          <CardMovie />
-          <CardMovie />
-          <CardMovie />
+          {/* {data &&
+            data.results.map((item) => <CardMovie key={item.id} item={item} />)} */}
         </Container>
       </Section>
     </>
