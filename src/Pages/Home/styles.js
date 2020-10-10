@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   width: 95%;
-  height:100vh;
   margin: 0 auto;
   padding: 1rem 0;
   max-width: 80rem;

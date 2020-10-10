@@ -4,6 +4,8 @@ import { getToMoviesSucess, getToMoviesFailure, } from './actions';
 
 function* getMovies(param) {
   const page  = param.payload.page
+
+  console.log(page)
   try {
     const movies = yield call(api, page);
     yield put(getToMoviesSucess(movies));
