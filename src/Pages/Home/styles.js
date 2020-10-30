@@ -16,7 +16,7 @@ grid-template-columns: repeat(4,1fr);
 width: 100%;
 height:100%;
 padding: 1rem 0;
-gap: 0.5rem;
+gap: 1rem;
 
 @media(max-width:1090px) {
   grid-template-columns: repeat(3,1fr);

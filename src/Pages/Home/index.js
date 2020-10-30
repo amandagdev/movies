@@ -46,13 +46,6 @@ const Home = () => {
               <CardMovie key={item.id} item={item} page="1" />
             ))}
         </Container>
-
-        <Container>
-          {card &&
-            card.results.map((item) => (
-              <CardMovie key={item.id} item={item} page="2" />
-            ))}
-        </Container>
       </Section>
     </>
   );

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CardMovie = styled.div`
   width: 100%;
   height: 27rem;
-  padding: 0.5rem;
   margin-bottom: 0.5rem;
   img {
     width: 100%;
